@@ -65,7 +65,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.drawRect(24, 10, 851, 51);
 
         //draw the title image
-        titleImage= new ImageIcon("snaketitle.jpg");
+        titleImage= new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
         titleImage.paintIcon(this, g, 25, 11);
 
         //draw border for gameplay
@@ -86,44 +86,44 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.setFont(new Font("arial",Font.PLAIN, 14));
         g.drawString("Length: "+lengthofsnake, 780, 50);
 
-        rightmouth = new ImageIcon("rightmouth.png");
+        rightmouth = new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
         rightmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
 
         for(int a = 0; a<lengthofsnake; a++)
         {
             if(a==0 && right)
             {
-                rightmouth = new ImageIcon("rightmouth.png");
+                rightmouth = new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
                 rightmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
 
             if(a==0 && left)
             {
-                leftmouth = new ImageIcon("leftmouth.png");
+                leftmouth = new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
                 leftmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
 
             if(a==0 && down)
             {
-                downmouth = new ImageIcon("downmouth.png");
+                downmouth = new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
                 downmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
 
             if(a==0 && up)
             {
-                upmouth = new ImageIcon("upmouth.png");
+                upmouth = new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
                 upmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
 
             if(a!=0)
             {
-                snakeimage = new ImageIcon("snakeimage.png");
+                snakeimage = new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
                 snakeimage.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
 
         }
 
-        enemyimage=new ImageIcon("enemy.png");
+        enemyimage=new ImageIcon("D:\\Projects\\SnakeGame\\snakeR.png");
 
         if((enemyxpos[xpos]== snakexlength[0] && enemyypos[ypos]==snakeylength[0]))
         {
@@ -241,8 +241,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e)
-    {
+    public void actionPerformed(ActionEvent e) {
         timer.start();
         if(right)
         {
